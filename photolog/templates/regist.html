@@ -14,47 +14,47 @@
                         ,type    : 'POST'
                         ,cache   : false
                         ,data    : JSON.stringify({
-                        username : $('input[name=username]').val()
-                    })
+                            username : $('input[name=username]').val()
+                        })
                         ,contentType : 'application/json; charset=utf-8'
                         ,dataType    : 'json'
                         ,success     : function(data) {
-                        username = $('input[name=username]').val();
-                        if (data.result) {
+                            username = $('input[name=username]').val();
+                            if (data.result) {
+                                $('#regist').modal('hide');
+
+                                 bootbox.alert(username + '는 사용 가능한 아이디입니다.', function() {
+                                     $('#regist').modal('show');
+                                     $('input[name=username_check]').val('Y');
+                                     $('input[name=email]').focus().select();
+                                 });
+                            } else {
+                                $('#regist').modal('hide');
+
+                                bootbox.alert(username + '는 이미 사용중입니다. 다른 아이디를 사용하세요.', function() {
+                                    $('#regist').modal('show');
+                                    $('input[name=username]').val('');
+                                    $('input[name=username]').focus().select();
+                                });
+                           }
+                        }
+                        ,error: function(result) {
                             $('#regist').modal('hide');
 
-                             bootbox.alert(username + '는 사용 가능한 아이디입니다.', function() {
-                                 $('#regist').modal('show');
-                                 $('input[name=username_check]').val('Y');
-                                 $('input[name=email]').focus().select();
-                             });
-                        } else {
-                            $('#regist').modal('hide');
-
-                            bootbox.alert(username + '는 이미 사용중입니다. 다른 아이디를 사용하세요.', function() {
+                            bootbox.alert('통신에 오류가 발생했습니다. 잠시 후에 다시 사용하세요.', function() {
                                 $('#regist').modal('show');
-                                $('input[name=username]').val('');
-                                $('input[name=username]').focus().select();
                             });
-                       }
-                    }
-                    ,error: function(result) {
-                        $('#regist').modal('hide');
-
-                        bootbox.alert('통신에 오류가 발생했습니다. 잠시 후에 다시 사용하세요.', function() {
-                            $('#regist').modal('show');
-                        });
-                    }
-                });
+                        }
+                    });
 
                 } else {
                     $('#regist').modal('hide');
 
-                bootbox.alert('사용자명을 넣어주세요.', function() {
-                    $('#regist').modal('show');
-                    $('input[name=username]').focus();
-                });
-            }
+                    bootbox.alert('사용자명을 넣어주세요.', function() {
+                        $('#regist').modal('show');
+                        $('input[name=username]').focus();
+                    });
+                }
                 return false;
             };
             $('button#username_check').bind('click', submit_form);
