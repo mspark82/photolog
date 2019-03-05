@@ -30,12 +30,14 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
+                        	<!-- placeholder는 HTML5 속성 중 하나, input 타입 안에 text를 삽입하는 기능 -->
                             {{ render_field(form.username, class="form-control", placeholder="Username", autofocus=true) }}
                         </div>
                         <div class="form-group">
                             {{ render_field(form.password, class="form-control", placeholder="Password") }}
                         </div>
                         <div class="form-group">
+                        	<!-- placeholder와 class를 생략하면 input type="hidden"으로 지정 -->
                             {{ render_field(form.next_url, value= next_url) }}
                         </div>
                         <div class="form-group checkbox">
@@ -59,24 +61,28 @@
     <script type="text/javascript">
         $('#login-form').modal('show');
         $('#username').focus();
-
+		
+        // ID기억하기 체크박스 선택 시 
         function confirmSave(checkbox) {
             var isRemember;
 
             if (checkbox.checked) {
                 isRemember = confirm("이 PC에 로그인 정보를 저장하시겠습니까? PC방등의 공공장소에서는 개인정보가 유출될 수 있으니 주의해주십시오.");
-
-            if (!isRemember) checkbox.checked = false;
+				alert(isRemember);	// confirm yes or no 결과에 따라 true/false 반환
+            	if (!isRemember) checkbox.checked = false;
           }
         }
 
+        
         function setsave(name, value, expiredays) {
             var today = new Date();
             today.setDate( today.getDate() + expiredays );
             document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + today.toGMTString() + ";"
+            alert("쿠키 저장 : " + document.cookie);
         }
 
         function saveLogin(username){
+        	alert("쿠키 체크 : " + username);
             if (username != "") {
                 setsave("username", username, 7);
             } else {
@@ -88,12 +94,16 @@
             var cookie = document.cookie + ";";
             var index = cookie.indexOf("username", 0);
             var val = "";
-
+			
+            alert(cookie);
+            alert(index);
+            
             if (index != -1) {
                 cookie = cookie.substring(index, cookie.length);
                 begin = cookie.indexOf("=", 0) + 1;
                 end = cookie.indexOf(";", begin);
                 val = unescape(cookie.substring(begin, end));
+                alert(cookie + "|" + begin + "|" + end + "|" + val);
             }
 
             if (val!= "") {
@@ -102,15 +112,19 @@
             }
         }
 
+     	// 로그인하기 버튼 클릭시
         function checkLogin() {
+			alert("로그인 버튼 클릭");        	
             if (document.frm.remember.checked) {
+            	// ID기억하기 체크된 경우 쿠키에 username 기록
                 saveLogin(document.frm.username.value);
             }
             else {
+            	// 미체크시 쿠키 username 삭제
                 saveLogin("");
             }
         }
-
+		// 페이지 로딩 시 getLogin() 호출
         window.onload = getLogin()
     </script>
 {% endblock %}

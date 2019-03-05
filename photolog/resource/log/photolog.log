@@ -1,5 +1,56 @@
-2019-02-17 23:39:11,501 - INFO - static folder : /Users/hugh.park/IdeaProjects/photolog/photolog/../static
-2019-02-17 23:39:11,501 - INFO - template folder : ../templates
-2019-02-17 23:39:11,854 - INFO - static folder : /Users/hugh.park/IdeaProjects/photolog/photolog/../static
-2019-02-17 23:39:11,854 - INFO - template folder : ../templates
-2019-02-17 23:39:36,884 - INFO - (GET)next_url is http://0.0.0.0:5000/
+2019-03-05 22:22:24,668 - INFO - static folder : C:\pyproject\workspace\photolog\photolog\../static
+2019-03-05 22:22:24,670 - INFO - template folder : ../templates
+2019-03-05 22:22:26,016 - INFO - static folder : C:\pyproject\workspace\photolog\photolog\../static
+2019-03-05 22:22:26,016 - INFO - template folder : ../templates
+2019-03-05 22:22:47,934 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 22:22:58,720 - INFO - (POST)next_url is http://127.0.0.1:5000/
+2019-03-05 22:23:06,215 - INFO - (POST)next_url is http://127.0.0.1:5000/
+2019-03-05 22:23:23,814 - DEBUG - <User 'aaaa' 'aaa@aaa.com'>
+2019-03-05 22:23:28,328 - INFO - (GET)next_url is http://127.0.0.1:5000/photo/
+2019-03-05 22:23:31,380 - INFO - (POST)next_url is http://127.0.0.1:5000/photo/
+2019-03-05 22:24:03,467 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 22:28:21,564 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 22:28:32,384 - INFO - (POST)next_url is http://127.0.0.1:5000/
+2019-03-05 22:28:36,118 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 22:28:37,532 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 22:28:38,591 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 22:37:04,168 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 22:43:23,044 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 22:43:36,612 - INFO - (POST)next_url is http://127.0.0.1:5000/
+2019-03-05 22:45:31,558 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 22:45:36,547 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 22:48:29,828 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 22:51:08,613 - INFO - (POST)next_url is http://127.0.0.1:5000/
+2019-03-05 22:51:11,594 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 22:51:22,357 - INFO - (POST)next_url is http://127.0.0.1:5000/
+2019-03-05 22:51:24,879 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 22:51:45,616 - INFO - (POST)next_url is http://127.0.0.1:5000/
+2019-03-05 22:52:20,858 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 23:06:43,720 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 23:10:15,190 - INFO - static folder : C:\pyproject\workspace\photolog\photolog\../static
+2019-03-05 23:10:15,191 - INFO - template folder : ../templates
+2019-03-05 23:10:43,673 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 23:13:16,541 - INFO - (POST)next_url is http://127.0.0.1:5000/
+2019-03-05 23:22:41,154 - INFO - static folder : C:\pyproject\workspace\photolog\photolog\../static
+2019-03-05 23:22:41,154 - INFO - template folder : ../templates
+2019-03-05 23:26:49,630 - INFO - static folder : C:\pyproject\workspace\photolog\photolog\../static
+2019-03-05 23:26:49,630 - INFO - template folder : ../templates
+2019-03-05 23:27:06,747 - INFO - (GET)next_url is http://127.0.0.1:5000/logout
+2019-03-05 23:27:10,860 - INFO - (GET)next_url is http://127.0.0.1:5000/logout
+2019-03-05 23:27:21,771 - INFO - (POST)next_url is http://127.0.0.1:5000/logout
+2019-03-05 23:27:21,872 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 23:28:19,363 - INFO - static folder : C:\pyproject\workspace\photolog\photolog\../static
+2019-03-05 23:28:19,363 - INFO - template folder : ../templates
+2019-03-05 23:28:47,674 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 23:28:56,290 - INFO - (POST)next_url is http://127.0.0.1:5000/
+2019-03-05 23:29:47,442 - INFO - static folder : C:\pyproject\workspace\photolog\photolog\../static
+2019-03-05 23:29:47,442 - INFO - template folder : ../templates
+2019-03-05 23:49:30,472 - INFO - static folder : C:\pyproject\workspace\photolog\photolog\../static
+2019-03-05 23:49:30,472 - INFO - template folder : ../templates
+2019-03-05 23:49:40,576 - INFO - (GET)next_url is http://127.0.0.1:5000/logout
+2019-03-05 23:49:45,126 - INFO - (GET)next_url is http://127.0.0.1:5000/logout
+2019-03-05 23:49:53,871 - INFO - (POST)next_url is http://127.0.0.1:5000/logout
+2019-03-05 23:49:53,972 - INFO - (GET)next_url is http://127.0.0.1:5000/
+2019-03-05 23:50:05,942 - INFO - (POST)next_url is http://127.0.0.1:5000/
+2019-03-05 23:52:20,776 - INFO - static folder : C:\pyproject\workspace\photolog\photolog\../static
+2019-03-05 23:52:20,776 - INFO - template folder : ../templates

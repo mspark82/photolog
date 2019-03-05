@@ -66,12 +66,17 @@ def login_required(f):
 @photolog.route('/')
 @login_required
 def index():
+    print('로그인 성공?')
     """로그인이 성공한 다음에 보여줄 초기 페이지"""
-    return redirect(url_for('.show_all'))
+    """ photo_show.py 의 show_all 함수 호출"""
+    """url_for 함수에서 블루프린트를 생략하면 처음 호출된 블루프린트 내부의 함수를 호출"""
+    """블루프린트가 생략되면 동일 블루프린트 컨트롤러 내부 함수를 호출 하는거 같다."""
+    return redirect(url_for('photolog.show_all'))
 
 
 @photolog.route('/user/login')
 def login_form():
+    print('로그인 정보가 없으면...')
     """아이디/비밀번호 기반의 로그인 화면을 제공함 """
     
     next_url = request.args.get('next', '')
@@ -99,6 +104,7 @@ def login():
     login_error = None
     
     if form.validate():
+        """ 세션 생성"""
         session.permanent = True
     
         username = form.username.data
